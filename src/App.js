@@ -28,10 +28,10 @@ function App() {
                     <Login/>
                 </Route>
                 <Route path="/blogposts">
-                    <BlogPosts/>
+                    {isAuthenticated ? <BlogPosts/> : <Redirect to="/" />}
                 </Route>
                 <Route path="/blog/:id">
-                    <Blog/>
+                    {isAuthenticated ? <Blog/> : <Redirect to="/" />}
                 </Route>
             </Switch>
         </Router>
