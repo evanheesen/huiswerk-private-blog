@@ -9,11 +9,12 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useParams
 } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
     // We houden in de state bij of iemand is "ingelogd" (simpele versie)
+
     const [isAuthenticated, toggleIsAuthenticated] = useState(false);
 
     return (
@@ -25,14 +26,17 @@ function App() {
                     <Home/>
                 </Route>
                 <Route path="/login">
-                    <Login/>
+                    <Login
+                        toggleAuth={toggleIsAuthenticated}
+                        isAuth={isAuthenticated}
+                    />
                 </Route>
-                <Route path="/blogposts">
-                    {isAuthenticated ? <BlogPosts/> : <Redirect to="/" />}
-                </Route>
-                <Route path="/blog/:id">
-                    {isAuthenticated ? <Blog/> : <Redirect to="/" />}
-                </Route>
+                <PrivateRoute path="/blogposts" isAuth={isAuthenticated}>
+                    <BlogPosts/>
+                </PrivateRoute>
+                <PrivateRoute path="/blog/:id" isAuth={isAuthenticated}>
+                    <Blog/>
+                </PrivateRoute>
             </Switch>
         </Router>
     );

@@ -1,7 +1,7 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom"
 
-function TopMenu() {
+function TopMenu({isAuth}) {
     return (
         <nav>
 
@@ -13,11 +13,15 @@ function TopMenu() {
                     </li>
 
                     <li>
+                        {/*<PrivateRoute>*/}
                         <NavLink to="/login" activeClassName="active-link">Login</NavLink>
+                        {/*</PrivateRoute>*/}
                     </li>
 
                     <li>
+                        {/*<PrivateRoute>*/}
                         <NavLink to="/blogposts" activeClassName="active-link">Blog Overzicht</NavLink>
+                        {/*</PrivateRoute>*/}
                     </li>
                 </ul>
 
