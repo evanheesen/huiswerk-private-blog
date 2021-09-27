@@ -13,8 +13,8 @@ function BlogPosts() {
         <>
 
             <h1>Blog overzichtspagina</h1>
-            <p>Aantal blogposts: {posts.length}</p>
-            <ul>{listPosts}</ul>
+            <p className="info-text">Aantal blogposts: {posts.length}</p>
+            <ul className="ul-blog">{listPosts}</ul>
 
         </>
 

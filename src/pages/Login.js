@@ -29,7 +29,7 @@ function Login({isAuth, toggleAuth}) {
     return (
         <>
             <h1>Login pagina</h1>
-            <p>Klik hieronder om in te loggen of uit te loggen.</p>
+            <p className="info-text">Klik hieronder om in te loggen of uit te loggen.</p>
 
             <div className="loginForm">
                 <form onSubmit={handleSubmit(handleClick)}>

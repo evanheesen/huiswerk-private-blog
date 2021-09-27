@@ -12,7 +12,7 @@ function TopMenu({isAuth, toggleAuth}) {
 
             <div className="nav-container">
 
-                <ul>
+                <ul className="ul-header">
                     <li>
                         <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
                     </li>
