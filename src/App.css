@@ -1,44 +1,125 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: lightgrey;
+    line-height: 1.5;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*.App {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.App-logo {*/
+/*    height: 40vmin;*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*    .App-logo {*/
+/*        animation: App-logo-spin infinite 20s linear;*/
+/*    }*/
+/*}*/
+
+/*.App-header {*/
+/*    background-color: #282c34;*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-size: calc(10px + 2vmin);*/
+/*    color: white;*/
+/*}*/
+
+/*.App-link {*/
+/*    color: #61dafb;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*    from {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    to {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+nav {
+    /*text-align: left;*/
+    background-color: indianred;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*.active-link {*/
+/*    color: white;*/
+/*    border-bottom: 1px;*/
+/*}*/
+
+a,
+a:visited,
+a:hover {
+    color: white;
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+a:active {
+    border-bottom: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+    list-style-type: none;
 }
 
 #hiddenList {
-  display: none;
+    display: none;
+}
+
+.inputField {
+    display: block;
+    width: 200px;
+    margin: 5px 0 20px 0;
+}
+
+label {
+    text-align: left;
+}
+
+.loginButton {
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+.loginForm {
+    display: inline-block;
+    /*margin: auto;*/
+    /*text-align: center;*/
+}
+
+fieldset {
+    background-color: indianred;
+    color: white;
+    border-radius: 50px;
+    width: 400px;
+    padding: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 

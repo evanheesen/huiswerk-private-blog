@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "username": "frenkiedejong",
+    "password": "barcelona"
+  },
+  {
+    "id": "2",
+    "username": "davyklaassen",
+    "password": "amsterdam"
+  },
+  {
+    "id": "3",
+    "username": "matthijsdeligt",
+    "password": "turijn"
+  },
+  {
+    "id": "4",
+    "username": "admin",
+    "password": "admin"
+  }
+]

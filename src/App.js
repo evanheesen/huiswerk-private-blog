@@ -11,16 +11,18 @@ import {
     Route,
 } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
+// import { useForm } from "react-hook-form";
 
 function App() {
-    // We houden in de state bij of iemand is "ingelogd" (simpele versie)
 
+    // We houden in de state bij of iemand is "ingelogd" (simpele versie)
     const [isAuthenticated, toggleIsAuthenticated] = useState(false);
 
     return (
         <Router>
             <TopMenu
                 isAuth={isAuthenticated}
+                toggleAuth={toggleIsAuthenticated}
             />
 
             <Switch>
@@ -30,6 +32,7 @@ function App() {
                 <Route path="/login">
                     <Login
                         toggleAuth={toggleIsAuthenticated}
+                        isAuth={isAuthenticated}
                     />
                 </Route>
                 <PrivateRoute path="/blogposts" isAuth={isAuthenticated}>
