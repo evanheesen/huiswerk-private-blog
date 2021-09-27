@@ -19,7 +19,9 @@ function App() {
 
     return (
         <Router>
-            <TopMenu/>
+            <TopMenu
+                isAuth={isAuthenticated}
+            />
 
             <Switch>
                 <Route exact path="/">
@@ -28,7 +30,6 @@ function App() {
                 <Route path="/login">
                     <Login
                         toggleAuth={toggleIsAuthenticated}
-                        isAuth={isAuthenticated}
                     />
                 </Route>
                 <PrivateRoute path="/blogposts" isAuth={isAuthenticated}>

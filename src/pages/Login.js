@@ -7,16 +7,24 @@ function Login({isAuth, toggleAuth}) {
 
     function handleClick() {
         toggleAuth(true)
+        history.push("/blogposts")
+    }
+
+    function handleClickLogOut() {
+        toggleAuth(false)
         history.push("/")
     }
 
     return (
         <>
             <h1>Login pagina</h1>
-            <p>Klik op de knop om in te loggen</p>
+            <p>Klik hieronder om in te loggen of uit te loggen.</p>
             <button type="button" onClick={handleClick}>
                 Login
-                    </button>
+            </button>
+            <button type="button" onClick={handleClickLogOut}>
+                Log uit
+            </button>
         </>
     )
 }
