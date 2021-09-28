@@ -18,11 +18,11 @@ function Login({isAuth, toggleAuth}) {
         const thisUser = users.find((user) =>
             user.username === data.username);
 
-        if (thisUser.password === data.password) { //als wachtwoord gelijk is aan ingevuld wachtwoord
+        if (thisUser && thisUser.password === data.password) { //als wachtwoord gelijk is aan ingevuld wachtwoord
             toggleAuth(!isAuth);
             history.push("/blogposts");
         } else {
-            setMessageError("Deze combinatie van gebruikersnaam en wachtwoord is niet bekend")
+            setMessageError("Deze combinatie van gebruikersnaam en wachtwoord is niet bekend.")
         }
     }
 
@@ -62,7 +62,7 @@ function Login({isAuth, toggleAuth}) {
                         >
                             Inloggen
                         </button>
-                        <p>{messageError}</p>
+                        <p className="error-message">{messageError}</p>
                     </fieldset>
                 </form>
             </div>

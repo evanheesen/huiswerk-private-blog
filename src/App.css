@@ -137,4 +137,10 @@ fieldset {
     text-align: center;
 }
 
+.error-message {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
 
