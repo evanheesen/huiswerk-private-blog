@@ -24,12 +24,13 @@ h1 {
 h2 {
     font-family: 'Shadows Into Light', cursive;
     font-size: 25px;
-    margin-bottom: 20px;
+    margin: 15px 0 20px 0;
 }
 
 h3 {
     font-family: 'Shadows Into Light', cursive;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -58,6 +59,11 @@ nav {
 
 .info-text {
     margin-bottom: 20px;
+}
+
+.blog-text {
+    text-align: left;
+    max-width: 800px;
 }
 
 .ul-blog a, .ul-blog a:visited {

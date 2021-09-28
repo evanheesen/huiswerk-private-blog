@@ -19,7 +19,7 @@ function Blog() {
             <h2>{dataPost[0].title}</h2>
 
             <h3>Date: {dataPost[0].date}</h3>
-            <p>
+            <p className="blog-text">
                 {dataPost[0].content}
             </p>
         </>
